@@ -1,6 +1,4 @@
-# blog
+# This is my Resume
 
 
-## This is my first commit.
-
-#### This is my second commit..
+## 你可以点击上方的预览，以此来预览我的网页简历
