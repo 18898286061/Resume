@@ -45,7 +45,8 @@ h1,h2,h3,h4,h5,h6 {
 
 .topNavBar .topNavBar-inner .logo {
 	float: left;
-	font-size: 24px;
+	font-family: Brush Script Std;
+	font-size: 32px;
 }
 
 .topNavBar .topNavBar-inner .logo .rs {
@@ -158,7 +159,7 @@ body> main {
 }
 
 .userCard dl dd {
-	width: 70%;
+	width: 60%;
 	color: #9da0a7;
 }
 
@@ -207,7 +208,7 @@ main .buttonWrapper .button:hover {
   }
 
 .slefIntroduction {
-	font-family: KAITI;
+	font-family: 方正舒体;
 	max-width: 940px;
 	margin: 0 auto;
 	text-align: center;
