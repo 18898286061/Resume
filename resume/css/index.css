@@ -37,7 +37,18 @@ h1,h2,h3,h4,h5,h6 {
 	top: 0;
 	left: 0;
 	width: 100%;
+	transition: all 0.5s;
+	color: #E6CEAC;
 }
+
+.topNavBar.sticky {
+	background: #fff;
+	padding: 10px 0;
+	z-index: 1;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+	color: #3d4451
+}
+
 .topNavBar .topNavBar-inner {
 	padding: 0 16px;
 	color: #E6CEAC;
@@ -59,19 +70,77 @@ h1,h2,h3,h4,h5,h6 {
 	padding-top: 6px;
 }
 
-.topNavBar .topNavBar-inner nav ul li {
+.topNavBar .topNavBar-inner nav>ul>li {
 	float: left;
 	margin: 0 17px;
+	position: relative;
 }
 
-.topNavBar .topNavBar-inner nav ul li>a{
+.topNavBar .topNavBar-inner nav>ul>li>a{
 	font-size: 14px;
-    padding-bottom: 5px;	
 	font-weight: bold;
+	color: inherit;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: block;
+	/* 加上上下透明border可以防止block抖动的现象 */
+	border-top: 3px solid transparent; 
+	border-bottom: 3px solid transparent;
+	position: relative;
 }
 
-.topNavBar .topNavBar-inner nav ul li>a:hover{
-	border-bottom: 3px solid #e06567;
+.topNavBar .topNavBar-inner nav>ul>li.active>a::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	background: #e06567;
+	height: 3px;
+	animation: menuSlide .4s;
+}
+
+@keyframes menuSlide {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
+.topNavBar .submenu {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	background: #fff;
+	color: #3d4451;
+	border-radius: 2px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	font-size: 14px;
+}
+
+.topNavBar li.active>.submenu {
+	display: block;
+	animation: submenuSlide .4s;
+}
+
+@keyframes submenuSlide{
+	0% {
+		margin-right: 100%;
+		opacity: 0;
+	}
+	100% {
+		margin-right: 0%;
+		opacity: 1;
+	}
+}
+
+.topNavBar .submenu>li {
+	white-space: nowrap;
+	padding: 5px 10px;
 }
 
 /*Banner部分*/
