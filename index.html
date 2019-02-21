@@ -62,9 +62,8 @@
 		display: flex;
 	}
 	</style>
-	<link rel="stylesheet" type="text/css" href="./resume/css/index.css">
-	<script src="//at.alicdn.com/t/font_934830_b8ho6pjrc6k.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 <body>
 	<!-- 开始的Loading动画 -->
@@ -109,7 +108,7 @@
 		<div data-x id="siteAbout" class="userCard">
 			<div class="pictrueAndText clearfix">
 				<div class="pictrue">
-					<img src="./resume/img/pic.jpg" width=330 height=330 alt="avatar">
+					<img src="./img/pic.jpg" width=330 height=330 alt="avatar">
 				</div>
 				<div class="text">
 					<span class="welcome">Hello
@@ -221,40 +220,50 @@
 	</section>
 	<section data-x id="siteWorks" class="portfolio">
 		<h2>作品集</h2>
-		<nav>
-			<ol class="clearfix">
-				<li id="portfolio1">所有</li>
-				<li id="portfolio2">框架</li>
-				<li id="portfolio3">原生JS &amp; CSS</li>
-			</ol>
-			<div id="portfolioBar" class="bar state-1">
-				<div class="bar-inner"></div>
+		<!-- 变成轮播 -->
+			<!-- Slider main container -->
+			<div class="swiper-container">
+			<!-- Additional required wrapper -->
+			<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide"><img src="./img/Canvas.jpg" alt="Canvas"></div>
+					<div class="swiper-slide"><img src="./img/Nav.jpg" alt="Nav"></div>
+					<div class="swiper-slide"><img src="./img/Slides.jpg" alt="Slides"></div>
 			</div>
-		</nav>
-		<script>
-			portfolio1.onclick = function() {
-				portfolioBar.className = 'bar state-1'
-			}
-			portfolio2.onclick = function() {
-				portfolioBar.className = 'bar state-2'
-			}
-			portfolio3.onclick = function() {
-				portfolioBar.className = 'bar state-3'
-			}
+			<!-- If we need pagination -->
+			<div class="swiper-pagination"></div>
 
-		</script>
-		<div class="works" style="height: 597px;">
-				<div class="big" style="top: 0; left: 0;">
-				  <img src="./resume/img/1.jpg" alt="作品1">
-				</div>
-				<div class="small" style="top: 0; left: 645px;">
-				  <img src="./resume/img/2.jpg" alt="作品2">
-				</div>
-				<div class="small" style="top: 312px; left: 645px;">
-				  <img src="./resume/img/3.jpg" alt="作品3">
-				</div>
-			  </div>		  
+			<!-- If we need navigation buttons -->
+			</div>
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
 	</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+<script src="//at.alicdn.com/t/font_934830_b8ho6pjrc6k.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+<script>
+	console.log(window.Swiper);
+	var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    // scrollbar: {
+    //   el: '.swiper-scrollbar',
+    // },
+  })
+</script>
 <script>
 	// 开场Loding动画
 	// setTimeout(function() {

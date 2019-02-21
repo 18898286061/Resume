@@ -356,60 +356,22 @@ section.skills.offset .progress {
 section.portfolio {
 	text-align: center;
 	margin-bottom: 100px;
+	max-width: 826px;
 }
 
-section.portfolio > nav {
-	margin-top: 32px;
-	display: inline-block;
-    vertical-align: top;
-}
-section.portfolio > nav > ol {
-	display: inline-block;
-    vertical-align: top;
-	margin: 0 auto;
-}
-section.portfolio > nav > ol > li {
-	float: left;
-	margin-left: 40px;
-	cursor: pointer;
+section.portfolio h2{
+	margin-bottom: 32px;
 }
 
-section.portfolio > nav > ol > li:first-child {
-	margin-left: 0;
+section.portfolio .swiper-container {
+	width: 625px;
+	height: 418px;
 }
 
-section.portfolio > nav .bar {
-	height: 7px;
-	background: #fff;
-	margin-top: 5px;
-	margin-bottom: 28px;
-	border-radius: 3px;
-}
-
-section.portfolio > nav .bar-inner {
-	height: 100%;
-	background: #e6686a;
-	border-radius: 3px;
-	transition: all 0.3s;
-}
-
-section.portfolio > nav .bar.state-1 .bar-inner{
-	margin-left: 0;
-	width: 50px;
-}
-section.portfolio > nav .bar.state-2 .bar-inner{
-	margin-left: 65px;
-	width: 50px;
-}
-section.portfolio > nav .bar.state-3 .bar-inner{
-	margin-left: 140px;
-	width: 105px;
-}
-
-section.portfolio .works{
-	position: relative;
-}
-section.portfolio .works > .big,
-section.portfolio .works > .small {
-	position: absolute;
+section.portfolio .swiper-button-next,
+section.portfolio .swiper-button-prev {
+	background-color: white;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
 }
