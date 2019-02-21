@@ -1,3 +1,10 @@
+.icon {
+	width: 1em; height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -257,8 +264,18 @@ body> main {
 	margin: 8px 16px;
 }
 
+@keyframes circle{
+	0% {
+		background: #e6686a;
+	}
+	100% {
+		background: #CF5D5F;
+	}
+}
 .userCard > footer.media > a:hover{
-  background: #CF5D5F;
+	animation: circle .8s;
+	/* animation-fill-mode: forwards; */
+	background: #CF5D5F;
 }
 
 .userCard svg {
