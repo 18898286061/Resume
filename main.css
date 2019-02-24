@@ -166,7 +166,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .banner{
 	height: 515px;
-	background-image: url('../img/wall.jpg');
+	background-image: url('./img/wall.jpg');
 	background-position: center center;
 	background-size: cover;
 }
